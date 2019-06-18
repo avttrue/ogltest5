@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>cube1.png</file>
+        <file>cube2.png</file>
+        <file>cube3.png</file>
+        <file>skybox1.png</file>
+    </qresource>
+</RCC>
