@@ -17,6 +17,7 @@ OGLWidget::OGLWidget(QWidget *parent)
 
 OGLWidget::~OGLWidget()
 {
+    makeCurrent(); // убирает варнинг "QOpenGLTexturePrivate::destroy() called without a current context"
     delete m_Eye;
     delete m_SkyBox;
     for(auto o: m_Objects) delete o;
