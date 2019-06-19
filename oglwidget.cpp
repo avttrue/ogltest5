@@ -22,7 +22,6 @@ OGLWidget::~OGLWidget()
     delete m_SkyBox;
     for(auto o: m_Objects) delete o;
     for(auto o: m_Groups) delete o;
-    qDebug() << m_TransformObjects.count();
     //for(auto o: m_TransformObjects) delete o; // вызывает ошибку при завершении
 }
 
