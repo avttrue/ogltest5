@@ -18,6 +18,7 @@ OGLWidget::OGLWidget(QWidget *parent)
 OGLWidget::~OGLWidget()
 {
     delete m_Eye;
+    delete m_SkyBox;
     for(auto o: m_Objects) delete o;
     for(auto o: m_Groups) delete o;
     qDebug() << m_TransformObjects.count();
@@ -86,7 +87,7 @@ void OGLWidget::initializeGL()
     m_TransformObjects.append(m_Groups.last());
 
     //m_Groups.at(0)->add(m_Eye);
-    m_SkyBox = new SkyBox(100.0, QImage(":/skybox1.png"));
+    m_SkyBox = new SkyBox(100.0, QImage(":/skybox1.jpg"));
 
 
     m_Timer.start(30, this);
